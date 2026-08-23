@@ -1,0 +1,11 @@
+dispersao-da-luz/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── assets/
+│   └── (imagens futuras)
+├── README.md
+├── .gitignore
+└── LICENSE
