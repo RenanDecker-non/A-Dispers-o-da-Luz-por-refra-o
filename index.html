@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site educacional sobre a dispersão da luz por refração - física dos prismas, arco-íris e muito mais.">
+    <meta name="keywords" content="física, luz, refração, dispersão, prisma, arco-íris, Newton, Snell">
+    <meta name="author" content="Seu Nome">
+    <title>Dispersão da Luz | O Mistério do Prisma</title>
+    
+    <!-- MathJax para fórmulas -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌈</text></svg>">
+</head>
+<body>
+
+    <!-- NAVEGAÇÃO -->
+    <nav>
+        <div class="nav-container">
+            <a href="#inicio" class="logo">🌈 Dispersão da Luz</a>
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#luz">A Luz</a></li>
+                <li><a href="#refracao">Refração</a></li>
+                <li><a href="#dispersao">Dispersão</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#natureza">Na Natureza</a></li>
+                <li><a href="#calculadora">Simulador</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <h1>A Dispersão da Luz</h1>
+        <p>Descubra como a luz branca se revela em um espetáculo de cores ao atravessar diferentes meios. A física por trás dos prismas, arco-íris e da própria visão humana.</p>
+        <a href="#luz" class="btn-primary">Começar a Explorar</a>
+    </section>
+
+    <!-- SEÇÃO 1: O QUE É A LUZ -->
+    <section class="container" id="luz">
+        <h2 class="section-title">🌟 O Que é a Luz?</h2>
+        
+        <h3 class="subsection-title">1.1 A Natureza Dual da Luz</h3>
+        <p>A luz é uma das formas mais fascinantes de energia que conhecemos. Durante séculos, físicos brilhantes debateram sua verdadeira natureza: seria ela uma <strong>onda</strong> ou um conjunto de <strong>partículas</strong>?</p>
+        
+        <p>A resposta moderna, consolidada no século XX com a <strong>Mecânica Quântica</strong>, é que a luz possui <strong>natureza dual</strong>: ela se comporta como onda em alguns fenômenos (como a difração e a interferência) e como partícula em outros (como o efeito fotoelétrico).</p>
+        
+        <ul>
+            <li><strong>Como onda:</strong> A luz é uma <strong>onda eletromagnética</strong> — uma oscilação conjunta de campos elétricos e magnéticos que se propaga pelo espaço.</li>
+            <li><strong>Como partícula:</strong> A luz é composta por <strong>fótons</strong>, pacotes discretos de energia sem massa, cuja energia depende da frequência da onda (\(E = h \cdot f\)).</li>
+        </ul>
+        
+        <p>Para entender a dispersão da luz, focaremos principalmente em seu comportamento <strong>ondulatório</strong>.</p>
+
+        <h3 class="subsection-title">1.2 O Espectro Eletromagnético e a Luz Visível</h3>
+        <p>A luz que nossos olhos conseguem detectar é apenas uma pequena faixa do vasto <strong>espectro eletromagnético</strong>. Cada tipo de luz é caracterizado por seu <strong>comprimento de onda</strong> (\(\lambda\)) e sua <strong>frequência</strong> (\(f\)), relacionadas pela equação:</p>
+        
+        <div class="formula-box">
+            \[c = \lambda \cdot f\]
+        </div>
+        
+        <p>Onde \(c \approx 3 \times 10^8 \, m/s\) é a velocidade da luz no vácuo.</p>
+        
+        <p><strong>A luz visível ocupa a faixa de aproximadamente 380 nm a 750 nm:</strong></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Cor</th>
+                    <th>Comprimento de Onda (nm)</th>
+                    <th>Frequência (THz)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>🔴 Vermelho</td><td>620 – 750</td><td>400 – 480</td></tr>
+                <tr><td>🟠 Laranja</td><td>590 – 620</td><td>480 – 510</td></tr>
+                <tr><td>🟡 Amarelo</td><td>570 – 590</td><td>510 – 526</td></tr>
+                <tr><td>🟢 Verde</td><td>495 – 570</td><td>526 – 606</td></tr>
+                <tr><td>🔵 Azul</td><td>450 – 495</td><td>606 – 666</td></tr>
+                <tr><td>🟣 Anil</td><td>420 – 450</td><td>666 – 714</td></tr>
+                <tr><td>🟪 Violeta</td><td>380 – 420</td><td>714 – 790</td></tr>
+            </tbody>
+        </table>
+        
+        <div class="highlight-box">
+            <strong>Lembre-se:</strong> A luz branca que vemos no Sol ou em lâmpadas comuns é, na verdade, a <strong>mistura de todas essas cores</strong> simultaneamente.
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: REFRAÇÃO -->
+    <section class="container" id="refracao">
+        <h2 class="section-title">🔍 O Fenômeno da Refração</h2>
+        
+        <h3 class="subsection-title">2.1 O Que é Refração?</h3>
+        <p><strong>Refração</strong> é o fenômeno óptico no qual a luz <strong>muda de velocidade e de direção</strong> ao passar de um meio transparente para outro com propriedades diferentes (por exemplo, do ar para a água, ou do ar para o vidro).</p>
+        
+        <p>Imagine que você está empurrando um carrinho de supermercado em um piso liso (asfalto) e, de repente, uma das rodas entra na areia. A roda na areia fica mais lenta, fazendo o carrinho <strong>mudar de direção</strong>. É exatamente isso que acontece com a luz ao mudar de meio!</p>
+
+        <h3 class="subsection-title">2.2 O Índice de Refração (\(n\))</h3>
+        <p>Cada material possui uma "resistência" à passagem da luz, medida pelo <strong>índice de refração absoluto</strong> (\(n\)). Ele é definido como a razão entre a velocidade da luz no vácuo (\(c\)) e a velocidade da luz no material (\(v\)):</p>
+        
+        <div class="formula-box">
+            \[n = \frac{c}{v}\]
+        </div>
+        
+        <p>Como a luz sempre viaja mais devagar em qualquer meio material do que no vácuo, <strong>o índice de refração é sempre maior ou igual a 1</strong>.</p>
+        
+        <p><strong>Valores típicos de índices de refração:</strong></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Índice de Refração (\(n\))</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Vácuo</td><td>1,0000 (exato)</td></tr>
+                <tr><td>Ar (CNTP)</td><td>1,0003</td></tr>
+                <tr><td>Água</td><td>1,33</td></tr>
+                <tr><td>Vidro comum</td><td>1,50 – 1,52</td></tr>
+                <tr><td>Vidro flint (alta dispersão)</td><td>1,60 – 1,75</td></tr>
+                <tr><td>Diamante</td><td>2,42</td></tr>
+            </tbody>
+        </table>
+
+        <h3 class="subsection-title">2.3 A Lei de Snell-Descartes</h3>
+        <p>A relação matemática que rege a refração foi descoberta independentemente por <strong>Willebrord Snell</strong> (1621) e formalizada por <strong>René Descartes</strong> (1637). Ela é conhecida como <strong>Lei de Snell-Descartes</strong>:</p>
+        
+        <div class="formula-box">
+            \[n_1 \cdot \sin(\theta_1) = n_2 \cdot \sin(\theta_2)\]
+        </div>
+        
+        <p>Onde:</p>
+        <ul>
+            <li>\(n_1\) = índice de refração do meio de origem</li>
+            <li>\(n_2\) = índice de refração do meio de destino</li>
+            <li>\(\theta_1\) = ângulo de incidência (medido em relação à <strong>normal</strong>, a linha perpendicular à superfície)</li>
+            <li>\(\theta_2\) = ângulo de refração</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <strong>Regras práticas:</strong>
+            <ul>
+                <li>Se a luz passa de um meio <strong>menos refringente</strong> para um <strong>mais refringente</strong> (\(n_2 > n_1\)), o raio se <strong>aproxima da normal</strong> (\(\theta_2 < \theta_1\)).</li>
+                <li>Se passa de um meio <strong>mais refringente</strong> para um <strong>menos refringente</strong> (\(n_2 < n_1\)), o raio se <strong>afasta da normal</strong> (\(\theta_2 > \theta_1\)).</li>
+            </ul>
+        </div>
+
+        <h3 class="subsection-title">2.4 Reflexão Total Interna</h3>
+        <p>Quando a luz vai de um meio mais refringente para um menos refringente, existe um <strong>ângulo limite</strong> (\(\theta_L\)) além do qual a luz não consegue mais atravessar a superfície — ela é totalmente refletida de volta. Esse ângulo é calculado por:</p>
+        
+        <div class="formula-box">
+            \[\sin(\theta_L) = \frac{n_2}{n_1}\]
+        </div>
+        
+        <p>Esse fenômeno é a base do funcionamento das <strong>fibras ópticas</strong>, que transmitem internet, telefonia e dados médicos pelo mundo inteiro!</p>
+    </section>
+
+    <!-- SEÇÃO 3: DISPERSÃO -->
+    <section class="container" id="dispersao">
+        <h2 class="section-title">🌈 A Dispersão da Luz</h2>
+        
+        <h3 class="subsection-title">3.1 O Que é Dispersão?</h3>
+        <p><strong>Dispersão da luz</strong> é o fenômeno no qual a <strong>luz policromática</strong> (composta por várias cores, como a luz branca) se <strong>separa em suas cores componentes</strong> ao atravessar um meio refringente.</p>
+        
+        <p>A causa física é surpreendentemente elegante: <strong>o índice de refração de um material não é o mesmo para todas as cores!</strong> Ele varia ligeiramente de acordo com o <strong>comprimento de onda</strong> da luz.</p>
+
+        <h3 class="subsection-title">3.2 A Equação de Cauchy</h3>
+        <p>No século XIX, o matemático francês <strong>Augustin-Louis Cauchy</strong> propôs uma fórmula empírica que descreve como o índice de refração (\(n\)) varia com o comprimento de onda (\(\lambda\)):</p>
+        
+        <div class="formula-box">
+            \[n(\lambda) = A + \frac{B}{\lambda^2} + \frac{C}{\lambda^4} + \cdots\]
+        </div>
+        
+        <p>Onde \(A\), \(B\) e \(C\) são constantes que dependem do material.</p>
+        
+        <div class="highlight-box">
+            <strong>O que isso significa na prática?</strong>
+            <ul>
+                <li>Como \(\lambda\) aparece no denominador, <strong>quanto menor o comprimento de onda, maior o índice de refração</strong>.</li>
+                <li>A luz <strong>violeta</strong> (\(\lambda \approx 400\) nm) tem <strong>maior índice de refração</strong> no vidro que a luz <strong>vermelha</strong> (\(\lambda \approx 700\) nm).</li>
+                <li>Portanto, ao entrar no vidro, a luz violeta <strong>desvia mais</strong> que a vermelha.</li>
+            </ul>
+        </div>
+        
+        <p><strong>Exemplo prático no vidro crown:</strong></p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Cor</th>
+                    <th>\(\lambda\) (nm)</th>
+                    <th>\(n\) no vidro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Vermelha</td><td>700</td><td>1,513</td></tr>
+                <tr><td>Amarela</td><td>589</td><td>1,517</td></tr>
+                <tr><td>Azul</td><td>486</td><td>1,522</td></tr>
+                <tr><td>Violeta</td><td>400</td><td>1,532</td></tr>
+            </tbody>
+        </table>
+        
+        <p>Essa pequena diferença de apenas ~0,02 no índice é <strong>suficiente para separar visivelmente as cores</strong> quando a luz atravessa um prisma com ângulos adequados.</p>
+
+        <h3 class="subsection-title">3.3 O Prisma Óptico</h3>
+        <p>Um <strong>prisma</strong> é um bloco de material transparente (geralmente vidro) com faces planas não paralelas, normalmente em formato triangular.</p>
+        
+        <p>Quando um feixe de luz branca atinge a primeira face do prisma:</p>
+        <ol>
+            <li><strong>Na entrada:</strong> cada cor sofre uma refração diferente (o violeta desvia mais).</li>
+            <li><strong>Dentro do prisma:</strong> as cores já estão separadas, viajando em direções ligeiramente distintas.</li>
+            <li><strong>Na saída:</strong> ocorre uma <strong>segunda refração</strong>, que <strong>amplifica ainda mais</strong> a separação entre as cores.</li>
+        </ol>
+        
+        <p>O resultado é um <strong>leque colorido</strong> chamado <strong>espectro visível</strong>, com as cores na ordem: Vermelho, Laranja, Amarelo, Verde, Azul, Anil e Violeta (o famoso <strong>ROYGBIV</strong> em inglês).</p>
+    </section>
+
+    <!-- SEÇÃO 4: HISTÓRIA -->
+    <section class="container" id="historia">
+        <h2 class="section-title">📜 Contexto Histórico</h2>
+        
+        <h3 class="subsection-title">4.1 Antes de Newton</h3>
+        <p>Antes do século XVII, a cor era um mistério. Aristóteles acreditava que as cores surgiam da <strong>mistura entre luz e trevas</strong>. Filósofos medievais achavam que os prismas <strong>coloriam</strong> a luz branca, como se o vidro adicionasse pigmentos a ela.</p>
+
+        <h3 class="subsection-title">4.2 O Experimento Genial de Newton (1666)</h3>
+        <p>Em 1666, o jovem <strong>Isaac Newton</strong>, isolado em sua casa em Woolsthorpe durante a Grande Peste de Londres, realizou um dos experimentos mais elegantes da história da ciência.</p>
+        
+        <div class="highlight-box">
+            <strong>O experimento:</strong>
+            <ol>
+                <li>Newton fez um pequeno furo na janela de seu quarto escuro, deixando entrar um fino feixe de luz solar.</li>
+                <li>Colocou um <strong>prisma de vidro</strong> no caminho do feixe.</li>
+                <li>Observou que, na parede oposta, formava-se uma <strong>faixa colorida alongada</strong> — o espectro.</li>
+            </ol>
+        </div>
+        
+        <p><strong>A grande pergunta:</strong> O prisma estava <strong>colorindo</strong> a luz, ou estava apenas <strong>separando</strong> cores que já existiam nela?</p>
+        
+        <div class="highlight-box">
+            <strong>O experimento crucial (experimentum crucis):</strong>
+            <p>Para responder, Newton fez algo genial:</p>
+            <ol>
+                <li>Isolou <strong>uma única cor</strong> do espectro (por exemplo, o vermelho) usando um anteparo com furo.</li>
+                <li>Passou essa cor pura por um <strong>segundo prisma</strong>.</li>
+                <li>Observou que ela <strong>não se decompunha mais</strong> — apenas desviava, mantendo sua cor vermelha.</li>
+                <li>Depois, usou uma <strong>lente</strong> para recombinar todas as cores do espectro de volta em um único ponto.</li>
+                <li>Resultado: a luz <strong>voltou a ser branca</strong>!</li>
+            </ol>
+        </div>
+        
+        <p><strong>Conclusão revolucionária:</strong> A luz branca <strong>não é pura</strong> — ela é uma <strong>mistura de todas as cores do espectro</strong>. O prisma não adiciona cor; ele apenas <strong>revela</strong> o que já estava lá.</p>
+        
+        <p>Newton publicou essas descobertas em sua obra-prima <strong>"Opticks" (1704)</strong>, consolidando a teoria corpuscular da luz (que só seria complementada pela teoria ondulatória no século XIX).</p>
+    </section>
+
+    <!-- SEÇÃO 5: NATUREZA -->
+    <section class="container" id="natureza">
+        <h2 class="section-title">🌍 A Dispersão na Natureza e no Cotidiano</h2>
+        
+        <h3 class="subsection-title">5.1 O Arco-Íris 🌈</h3>
+        <p>O arco-íris é talvez o exemplo mais espetacular da dispersão da luz na natureza. Ele se forma quando a <strong>luz do Sol encontra gotículas de água em suspensão</strong> na atmosfera (após a chuva, perto de cachoeiras ou irrigadores).</p>
+        
+        <p><strong>O caminho da luz dentro de uma gota:</strong></p>
+        <ol>
+            <li><strong>Refração na entrada:</strong> a luz branca entra na gota e já começa a se separar (o violeta desvia mais que o vermelho).</li>
+            <li><strong>Reflexão interna na parede traseira:</strong> as cores atingem a parte de trás da gota e são refletidas.</li>
+            <li><strong>Refração na saída:</strong> ao sair da gota, as cores sofrem uma <strong>segunda refração</strong>, ampliando ainda mais a separação.</li>
+        </ol>
+        
+        <p>O ângulo entre o raio solar incidente e o raio emergente é de aproximadamente <strong>42° para o vermelho</strong> e <strong>40° para o violeta</strong>. Por isso vemos o vermelho na parte externa do arco e o violeta na parte interna.</p>
+        
+        <div class="highlight-box">
+            <strong>Curiosidades:</strong>
+            <ul>
+                <li>O <strong>arco-íris duplo</strong> ocorre quando a luz sofre <strong>duas reflexões internas</strong> na gota. O segundo arco aparece mais acima, com as <strong>cores invertidas</strong>.</li>
+                <li>Você <strong>nunca</strong> verá o mesmo arco-íris que outra pessoa — cada observador vê a luz de gotas diferentes!</li>
+            </ul>
+        </div>
+
+        <h3 class="subsection-title">5.2 Diamantes e Gemas Preciosas 💎</h3>
+        <p>O brilho e o "fogo" (os lampejos coloridos) dos diamantes são consequência direta de duas propriedades físicas excepcionais:</p>
+        
+        <ol>
+            <li><strong>Alto índice de refração (\(n = 2,42\)):</strong> faz a luz desviar muito, criando o brilho intenso.</li>
+            <li><strong>Alta dispersão:</strong> a diferença entre o índice de refração para o vermelho e para o violeta é grande, separando as cores de forma marcante.</li>
+        </ol>
+        
+        <p>Lapidadores profissionais cortam diamantes em ângulos precisos (o famoso <strong>corte brilhante</strong> com 57 ou 58 facetas) para <strong>maximizar a reflexão interna total</strong> e fazer a luz "dançar" dentro da pedra antes de sair, produzindo o espetáculo de cores.</p>
+        
+        <p>Outras gemas com alta dispersão incluem a <strong>zircônia cúbica</strong> e o <strong>moissanite</strong>, frequentemente usadas como alternativas ao diamante.</p>
+
+        <h3 class="subsection-title">5.3 Aberração Cromática em Lentes 📷</h3>
+        <p>Toda lente de vidro (de câmeras, telescópios, óculos, microscópios) age, em essência, como um conjunto de prismas. Isso significa que <strong>cada cor é focalizada em um ponto ligeiramente diferente</strong>.</p>
+        
+        <p>Esse defeito óptico chama-se <strong>aberração cromática</strong> e se manifesta como <strong>halos coloridos</strong> (geralmente roxos ou verdes) ao redor de áreas de alto contraste nas imagens.</p>
+        
+        <p><strong>Soluções modernas:</strong></p>
+        <ul>
+            <li><strong>Lentes acromáticas:</strong> combinam duas lentes de vidros diferentes (crown e flint) cujas dispersões se cancelam.</li>
+            <li><strong>Lentes apocromáticas (APO):</strong> usam três ou mais elementos para corrigir três cores diferentes, comuns em equipamentos profissionais de fotografia e astronomia.</li>
+            <li><strong>Lentes de fluorita:</strong> material com dispersão extremamente baixa, usado em telescópios de alta qualidade.</li>
+        </ul>
+
+        <h3 class="subsection-title">5.4 Outras Aplicações</h3>
+        <ul>
+            <li><strong>Espectrômetros e Espectrógrafos:</strong> instrumentos científicos que usam prismas (ou redes de difração) para separar a luz de estrelas, gases e materiais. Analisando o espectro, cientistas descobrem a <strong>composição química</strong>, <strong>temperatura</strong> e <strong>velocidade</strong> de objetos distantes no universo.</li>
+            <li><strong>Fibras Ópticas:</strong> embora usem reflexão total interna, o controle da dispersão é essencial para que os pulsos de luz não se "espalhem" ao longo de quilômetros de cabo.</li>
+            <li><strong>Holografia e Displays:</strong> tecnologias modernas exploram a dispersão controlada para criar imagens tridimensionais.</li>
+        </ul>
+    </section>
+
+    <!-- SEÇÃO 6: CURIOSIDADES -->
+    <section class="container">
+        <h2 class="section-title">🧪 Curiosidades e Experimentos Caseiros</h2>
+        
+        <h3 class="subsection-title">6.1 Faça Seu Próprio Arco-Íris em Casa</h3>
+        <p><strong>Materiais:</strong> um copo com água, um espelho pequeno, uma lanterna (ou luz do sol) e uma parede branca.</p>
+        
+        <p><strong>Como fazer:</strong></p>
+        <ol>
+            <li>Encha o copo com água até 3/4.</li>
+            <li>Incline o espelho dentro da água, apoiado na borda.</li>
+            <li>Aponte a lanterna para a parte submersa do espelho.</li>
+            <li>Ajuste o ângulo até ver um pequeno arco-íris na parede!</li>
+        </ol>
+
+        <h3 class="subsection-title">6.2 O CD como Rede de Difração</h3>
+        <p>A superfície de um CD ou DVD possui microscópicas trilhas espirais que funcionam como uma <strong>rede de difração</strong>. Ao refletir luz branca, elas separam as cores de forma ainda mais nítida que um prisma — e é por isso que a parte de baixo de um CD brilha com todas as cores do arco-íris!</p>
+    </section>
+
+    <!-- CALCULADORA INTERATIVA -->
+    <section class="container" id="calculadora">
+        <div class="calculator">
+            <h2 class="section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;">🧮 Simulador da Lei de Snell</h2>
+            <p style="margin-bottom: 2rem; color: #aaa;">Insira os valores abaixo para calcular o ângulo de refração de um raio de luz.</p>
+            
+            <div class="input-group">
+                <label for="n1">Índice de Refração do Meio 1 (ex: Ar = 1.0)</label>
+                <input type="number" id="n1" value="1.0" step="0.01" min="1">
+            </div>
+            <div class="input-group">
+                <label for="n2">Índice de Refração do Meio 2 (ex: Vidro = 1.5)</label>
+                <input type="number" id="n2" value="1.5" step="0.01" min="1">
+            </div>
+            <div class="input-group">
+                <label for="angle1">Ângulo de Incidência (em graus)</label>
+                <input type="number" id="angle1" value="45" step="1" min="0" max="89">
+            </div>
+
+            <button class="btn-calc" onclick="calcularRefrao()">Calcular Desvio da Luz</button>
+
+            <div class="result-box" id="resultado"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Projeto Educacional de Física | A Luz e seus Mistérios &copy; 2026</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            Feito com ❤️ e <a href="https://pages.github.com/" target="_blank" style="color: var(--accent);">GitHub Pages</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
